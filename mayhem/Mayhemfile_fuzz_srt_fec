@@ -1,0 +1,8 @@
+project: savantenvs/srt
+target: fuzz_srt_fec
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_srt_fec/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_srt_fec
+    libfuzzer: true
